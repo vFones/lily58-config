@@ -4,18 +4,20 @@
 
 Personal [Vial](https://get.vial.today/) keymap for the **Lily58 PRO V2** running on an RP2040 MCU. Features a custom OLED animation system that displays per-key icons synced across both halves, a scrolling Atom logo, and a safety-gated bootloader entry.
 
+![Lily58 Atom showcase](lily58_showcase.gif)
+
 ---
 
 ## Hardware
 
-| Component | Detail |
-|-----------|--------|
-| Keyboard | [Lily58 PRO V2](https://khor.store/products/lily58pro-2-0) (Khor Store) |
-| MCU | RP2040 (Raspberry Pi Pico) |
-| Split transport | Full-duplex serial — TX: GP0, RX: GP1 |
-| Display | SSD1306 OLED (128×32, 270° rotation) |
-| RGB | WS2812 on GP11 (PIO1) |
-| Matrix | 5 rows × 6 cols per side, COL2ROW |
+| Component       | Detail                                                                  |
+| -----------------| -------------------------------------------------------------------------|
+| Keyboard        | [Lily58 PRO V2](https://khor.store/products/lily58pro-2-0) (Khor Store) |
+| MCU             | RP2040 (Raspberry Pi Pico)                                              |
+| Split transport | Full-duplex serial — TX: GP0, RX: GP1                                   |
+| Display         | SSD1306 OLED (128×32, 270° rotation)                                    |
+| RGB             | WS2812 on GP11 (PIO1)                                                   |
+| Matrix          | 5 rows × 6 cols per side, COL2ROW                                       |
 
 ---
 
