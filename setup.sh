@@ -39,14 +39,22 @@ fi
 green "==> Initialising QMK submodules (this may take a while)..."
 make -C "$SCRIPT_DIR/$VIAL_QMK_DIR" git-submodule
 
-# ── copy board + keymap ───────────────────────────────────────────────────────
-green "==> Copying board definition and keymap into vial-qmk..."
+# ── symlink board + keymap ────────────────────────────────────────────────────
+green "==> Symlinking board definition into vial-qmk..."
 
 DEST="$SCRIPT_DIR/$VIAL_QMK_DIR/$BOARD_SRC"
-mkdir -p "$DEST"
-cp -r "$SCRIPT_DIR/$BOARD_SRC/." "$DEST/"
+DEST_PARENT="$(dirname "$DEST")"
 
-green "  Installed at: $DEST"
+mkdir -p "$DEST_PARENT"
+
+# Remove any existing copy or stale symlink
+if [ -e "$DEST" ] || [ -L "$DEST" ]; then
+    rm -rf "$DEST"
+fi
+
+ln -s "$SCRIPT_DIR/$BOARD_SRC" "$DEST"
+
+green "  Symlinked: $DEST -> $SCRIPT_DIR/$BOARD_SRC"
 
 # ── done ──────────────────────────────────────────────────────────────────────
 echo ""
