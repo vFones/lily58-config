@@ -114,7 +114,7 @@ pip3 install qmk
                   `----------------------------'           '------''--------------------'
 ```
 
-Reached by holding `RAISE` on the right half, then pressing `Del` (which becomes `RAISE2`).
+Reached by holding `RAISE`, then holding `RAISE2` (the RGUI key on base layer).
 
 ---
 
@@ -165,9 +165,9 @@ Icons are stored as 16-bit OLED bitmap arrays and rendered with an optional **gl
 | NKRO | ✅ | N-key rollover |
 | Extra keys | ✅ | Media / system keys |
 | Grave ESC | ✅ | `ESC` / `~` combo key |
-| WPM | ✅ | Words-per-minute tracking (available for OLED use) |
+| WPM | ❌ | |
 | LTO | ✅ | Link-time optimisation — smaller firmware |
-| Split transport mirror | ✅ | Layer state, LED state, mods, WPM, OLED synced |
+| Split transport mirror | ✅ | Layer state, LED state, mods, OLED synced |
 | OLED | ✅ | Custom animation sync via `SPLIT_TRANSACTION_IDS_USER ANIM_SYNC` |
 | Tap Dance | ❌ | |
 | Combos | ❌ | |

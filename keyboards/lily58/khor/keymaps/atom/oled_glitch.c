@@ -50,7 +50,7 @@ void oled_glitch_apply(uint8_t *buf, uint16_t size) {
             for (uint16_t x = w - s; x < w; x++) buf[row + x] = u8rand();
         }
     }
-    for (uint8_t i = 0; i < 18; i++) {
+    for (uint8_t i = 0; i < GLITCH_FLIP_COUNT; i++) {
         uint16_t k = (uint16_t)u8rand() | ((uint16_t)u8rand() << 8);
         k %= size;
         buf[k] ^= (uint8_t)(1u << (u8rand() & 7));

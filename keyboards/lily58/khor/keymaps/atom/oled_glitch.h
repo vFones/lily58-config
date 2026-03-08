@@ -1,7 +1,8 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
-#define GLITCH_FRAME_MS 20
+#define GLITCH_FRAME_MS  20
+#define GLITCH_FLIP_COUNT 18
 
 // Call to start a glitch burst lasting `frames` mutations.
 void oled_glitch_start(uint16_t frames);

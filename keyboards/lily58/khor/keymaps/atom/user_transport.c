@@ -1,5 +1,6 @@
 #include "user_transport.h"
 #include <transactions.h>
+#include <stddef.h>
 
 static user_transport_handler_t g_handler = NULL;
 
@@ -28,7 +29,7 @@ void user_transport_send(int8_t transaction_id, const void *data, uint8_t size) 
         return;
     }
 
-    if (!is_keyboard_master() || data == NULL || size == 0) {
+    if (data == NULL || size == 0) {
         return;
     }
 
